@@ -83,6 +83,7 @@
 			inner join instance on instance.FK_serverID = server.serverID
 			inner join website on website.FK_instanceID = instance.instanceID 
 			WHERE serverID = <cfqueryparam value="#arguments.serverID#" cfsqltype="cf_sql_integer">
+			and instance.configFile is not null
 			order by instance.configFile
 		</cfquery>
 		
