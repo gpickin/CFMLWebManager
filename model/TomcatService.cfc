@@ -28,7 +28,7 @@ component displayname="TomcatService" hint="Tomcat Service" output="false" exten
 				}
 				configToWrite = configToWrite & '<Host name="' & modules.data['url'][i] & '" appBase="webapps">' & chr(13) & chr(10);
 				configToWrite = configToWrite & chr(9) & '<Context path="" docBase="' & modules.data['path'][i] & '"></Context>' & chr(13) & chr(10);
-				configToWrite = configToWrite & '<Host>' & chr(13) & chr(10);
+				configToWrite = configToWrite & '</Host>' & chr(13) & chr(10);
 				
 			}	
 		}
